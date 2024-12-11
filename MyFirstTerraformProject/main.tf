@@ -2,4 +2,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_eip" "example_eip" {}
+resource "aws_eip" "example_eip" {
+  tags = {
+    Name = "MyElasticIP"
+  }
+}
